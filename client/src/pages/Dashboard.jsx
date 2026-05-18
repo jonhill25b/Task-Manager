@@ -11,7 +11,7 @@ export default function Dashboard() {
 
   // Setup our axios network instance with the secure Authorization header
   const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://task-manager-xmq4.onrender.com/api',
     headers: { Authorization: `Bearer ${token}` }
   });
 
