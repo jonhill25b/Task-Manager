@@ -22,7 +22,7 @@ export default function Dashboard() {
         const response = await api.get('/tasks');
         setTasks(response.data);
       } catch (err) {
-        console.error('Database connection error:', err); // Clean use of 'err'
+        console.error('Database connection error:', err);
         setError('System engine failed to retrieve tasks.');
       }
     };
@@ -42,7 +42,7 @@ export default function Dashboard() {
       setTitle('');
       setDescription('');
     } catch (err) {
-      console.error('Task execution write rejection:', err); // Clean use of 'err'
+      console.error('Task execution write rejection:', err);
       setError('Failed to write new task to database.');
     }
   };
@@ -57,7 +57,7 @@ export default function Dashboard() {
       const response = await api.put(`/tasks/${id}`, { status: nextStatus });
       setTasks(tasks.map(t => t._id === id ? response.data : t));
     } catch (err) {
-      console.error('Data modification stream failure:', err); // Clean use of 'err'
+      console.error('Data modification stream failure:', err);
       setError('Status modification operation failed.');
     }
   };
@@ -68,7 +68,7 @@ export default function Dashboard() {
       await api.delete(`/tasks/${id}`);
       setTasks(tasks.filter(t => t._id !== id)); 
     } catch (err) {
-      console.error('Database purge operation denied:', err); // Clean use of 'err'
+      console.error('Database purge operation denied:', err);
       setError('Task deletion command rejected by cluster.');
     }
   };
@@ -79,9 +79,9 @@ export default function Dashboard() {
       <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-zinc-900 pb-6 gap-4">
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-white">
-            Operator: <span className="text-amber-500">{user?.username}</span>
+            User: <span className="text-amber-500">{user?.username}</span>
           </h2>
-          <p className="text-xs text-zinc-400 mt-1 uppercase tracking-wider">Mission Command Center Dashboard</p>
+          <p className="text-xs text-zinc-400 mt-1 uppercase tracking-wider">Task Manager Dashboard</p>
         </div>
       </div>
 

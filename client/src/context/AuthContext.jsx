@@ -1,6 +1,5 @@
 import { createContext, useState } from 'react';
 
-// 1. Keep this local to the file (remove the 'export' keyword)
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
@@ -30,7 +29,4 @@ export function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
-
-// 2. Export the Context object as the default export at the bottom.
-// This satisfies Vite's linting rules perfectly.
 export default AuthContext;

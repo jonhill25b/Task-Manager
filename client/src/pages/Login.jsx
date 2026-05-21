@@ -18,7 +18,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      // Send credentials to your Node API
+      // Send credentials to my Node API
       const response = await axios.post('https://task-manager-xmq4.onrender.com/api/auth/login', {
         email,
         password
@@ -60,7 +60,7 @@ export default function Login() {
           </div>
 
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Security Password</label>
+            <label className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Password</label>
             <input
               type="password"
               required
@@ -81,7 +81,7 @@ export default function Login() {
         </form>
 
         <p className="mt-6 text-center text-xs text-zinc-500">
-          New operative?{' '}
+          New user?{' '}
           <Link to="/register" className="text-amber-500 hover:underline font-medium">
             Create an account
           </Link>

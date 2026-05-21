@@ -80,7 +80,7 @@ export default function Register() {
           </div>
 
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Security Password</label>
+            <label className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Password</label>
             <input
               type="password"
               required
@@ -96,7 +96,7 @@ export default function Register() {
             disabled={loading}
             className="w-full bg-amber-600 hover:bg-amber-500 text-white font-semibold py-2.5 rounded-md shadow-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
           >
-            {loading ? 'Creating Credentials...' : 'Register Operative'}
+            {loading ? 'Creating Credentials...' : 'Register'}
           </button>
         </form>
 
