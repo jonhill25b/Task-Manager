@@ -125,7 +125,7 @@ export default function Dashboard() {
               type="submit"
               className="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 font-bold py-2.5 rounded-md text-xs uppercase tracking-wider transition-all cursor-pointer"
             >
-              Push to Cluster
+              Push to Task Register
             </button>
           </form>
         </div>
